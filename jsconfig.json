@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "noEmit": true,
+        "baseUrl": ".",
+        "experimentalDecorators": true, // 解決 prettier 對於裝飾器語法的警告
+        "jsx": "preserve", // 解決 jsx 文件無法快速跳轉問題
+        "paths": {
+            // 解決項目中使用 @ 作為路徑別名, 導致 vscode 無法跳轉文件問題
+            "@/*": ["src/*"],
+            "components/*": ["src/components/*"],
+            "pages/*": ["src/pages/*"],
+            "assets/*": ["src/assets/*"]
+
+        },
+        "allowSyntheticDefaultImports": true
+    }
+}
