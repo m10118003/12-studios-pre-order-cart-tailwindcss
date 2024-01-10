@@ -26,7 +26,10 @@ export default function AxiosDemo() {
 
     // 定義 GetPost prop
     const handleGetPost = () => {
+        let t1 = new Date(); // 測試請求開始前的 timestamp
         getPost(1).then((response) => {
+            let t2 = new Date(); // 請求結束後的 timestamp
+            console.log(t2 - t1); // 請求所需的總時間
             setPost(response.data);
         });
     };
